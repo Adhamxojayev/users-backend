@@ -3,7 +3,7 @@ const {host, PORT} = require('./config.js')
 
 
 const server = http.createServer((req,res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4000')
+    res.setHeader('Access-Control-Allow-Origin', '*')
     if(req.url == '/api/data' && req.method == 'GET'){
         res.write(
             JSON.stringify([
